@@ -1,18 +1,20 @@
-import "./App.css";
-import { Canvas } from "@react-three/fiber";
-import { Environment, OrbitControls } from "@react-three/drei";
-import { QrCode } from "./pages/demo/Qr.tsx";
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { PresentationProvider } from "./context/PresentationContext";
+import Presentation from "./components/Presentation";
+import Page from "./components/Page";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div id="canvas-container">
-      <Canvas>
-        <OrbitControls />
-        <QrCode />
-        <Environment preset={"city"} />
-      </Canvas>
-    </div>
+    <Router>
+      <PresentationProvider>
+        <Routes>
+          <Route path="/" element={<Presentation />} />
+          <Route path="/page/:pageNumber" element={<Page />} />
+        </Routes>
+      </PresentationProvider>
+    </Router>
   );
-}
+};
 
 export default App;
