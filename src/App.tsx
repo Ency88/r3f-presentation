@@ -1,8 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { PresentationProvider } from "./context/PresentationContext";
-import Presentation from "./components/Presentation";
-import Page from "./components/Page";
+import Presentation from "./pages/presentation/Presentation.tsx";
 
 const App: React.FC = () => {
   return (
@@ -10,7 +9,6 @@ const App: React.FC = () => {
       <PresentationProvider>
         <Routes>
           <Route path="/" element={<Presentation />} />
-          <Route path="/page/:pageNumber" element={<Page />} />
         </Routes>
       </PresentationProvider>
     </Router>

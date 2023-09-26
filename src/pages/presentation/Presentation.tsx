@@ -1,6 +1,10 @@
 import "./Presentation.css";
 import React, { useEffect, useState } from "react";
-import { usePresentation } from "../context/PresentationContext";
+import { usePresentation } from "../../context/PresentationContext.tsx";
+import Page01 from "./slides/Page01.tsx";
+import Page02 from "./slides/Page02.tsx";
+import Page03 from "./slides/Page03.tsx";
+import BrandingLayout from "./components/BrandingLayout.tsx";
 
 const Presentation: React.FC = () => {
   const { currentPage, goToPage } = usePresentation();
@@ -18,7 +22,7 @@ const Presentation: React.FC = () => {
     const handleKeyPress = (event: KeyboardEvent) => {
       if (event.key === "ArrowLeft" && currentPage > 1) {
         handlePageChange(currentPage - 1);
-      } else if (event.key === "ArrowRight") {
+      } else if (event.key === "ArrowRight" && currentPage < pages.length) {
         handlePageChange(currentPage + 1);
       }
     };
@@ -30,11 +34,15 @@ const Presentation: React.FC = () => {
     };
   }, [currentPage, goToPage]);
 
+  const pages = [Page01, Page02, Page03];
+
   return (
     <div className="presentation">
-      <div className={`page ${isFadingOut ? "fade-out" : "fade-in"}`}>
-        <h1>Page {currentPage}</h1>
-      </div>
+      <BrandingLayout currentPage={currentPage}>
+        <div className={`page ${isFadingOut ? "fade-out" : "fade-in"}`}>
+          {React.createElement(pages[currentPage - 1])}
+        </div>
+      </BrandingLayout>
     </div>
   );
 };
