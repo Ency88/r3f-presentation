@@ -1,16 +1,12 @@
 import "./App.css";
-import { Canvas } from "@react-three/fiber";
-import { Environment, OrbitControls } from "@react-three/drei";
-import { QrCode } from "./pages/demo/Qr.tsx";
+import AppRoutes from "./pages/routes/AppRoutes.tsx";
 
 function App() {
   return (
-    <div id="canvas-container">
-      <Canvas>
-        <OrbitControls />
-        <QrCode />
-        <Environment preset={"city"} />
-      </Canvas>
+    <div className="wrapper">
+      <div className="canvas-container">
+        <AppRoutes />
+      </div>
     </div>
   );
 }
