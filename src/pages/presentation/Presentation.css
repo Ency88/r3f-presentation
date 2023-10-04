@@ -1,0 +1,14 @@
+.page {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+/* Fade in */
+.fade-in {
+    opacity: 1;
+}
+
+/* Fade out */
+.fade-out {
+    opacity: 0;
+}
