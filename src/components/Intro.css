@@ -1,0 +1,43 @@
+.intro-wrapper {
+  display: flex;
+    justify-content: center;
+}
+
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 400px;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+.link-button {
+    display: grid;
+    justify-content: center;
+    margin-top: 1.5rem;
+    padding: 0.5rem 2.5rem;
+    border: 1px solid black;
+    border-radius: 10px;
+
+    text-decoration: none;
+    color: black;
+}
+
+.link-button__filled {
+    color: white;
+    background: black;
+}
+
+.footer {
+    margin-top: 2rem;
+    color: lightgray;
+    font-size: 0.75rem;
+    text-align: center;
+}
