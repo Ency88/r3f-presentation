@@ -6,9 +6,9 @@
 // Your web app's Firebase configuration
 // const firebase = {
 //   apiKey: "AIzaSyD3KGCa2DRtVVTYpKPYm9a3oVYV_Iow4Hg",
-//   authDomain: "ency-r3f-presentation.firebaseapp.com",
-//   projectId: "ency-r3f-presentation",
-//   storageBucket: "ency-r3f-presentation.appspot.com",
+//   authDomain: "ency-r3f-basic-cube.firebaseapp.com",
+//   projectId: "ency-r3f-basic-cube",
+//   storageBucket: "ency-r3f-basic-cube.appspot.com",
 //   messagingSenderId: "703692947799",
 //   appId: "1:703692947799:web:6f188c41937b813677fe12"
 // };

@@ -1,18 +1,14 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { PresentationProvider } from "./context/PresentationContext";
-import Presentation from "./pages/presentation/Presentation.tsx";
+import "./App.css";
+import AppRoutes from "./pages/routes/AppRoutes.tsx";
 
-const App: React.FC = () => {
+function App() {
   return (
-    <Router>
-      <PresentationProvider>
-        <Routes>
-          <Route path="/" element={<Presentation />} />
-        </Routes>
-      </PresentationProvider>
-    </Router>
+    <div className="wrapper">
+      <div className="canvas-container">
+        <AppRoutes />
+      </div>
+    </div>
   );
-};
+}
 
 export default App;
