@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { Mesh } from "three";
-// import { EffectComposer, Glitch } from "@react-three/postprocessing";
 
 const BasicCube: React.FC = () => {
   const cubeRef = useRef<Mesh>(null);
@@ -13,15 +12,10 @@ const BasicCube: React.FC = () => {
   });
 
   return (
-    <>
-      <mesh ref={cubeRef}>
-        <boxGeometry args={[2, 2, 2]} />
-        <meshNormalMaterial />
-      </mesh>
-      {/*<EffectComposer>*/}
-      {/*  <Glitch />*/}
-      {/*</EffectComposer>*/}
-    </>
+    <mesh ref={cubeRef}>
+      <boxGeometry args={[2, 2, 2]} />
+      <meshNormalMaterial />
+    </mesh>
   );
 };
 

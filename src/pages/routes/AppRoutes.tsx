@@ -5,6 +5,8 @@ import BasicCube from "../basic-cube/BasicCube.tsx";
 import PseudoGeometryCube from "../pseudo-geometry-cube/pseudo-geometry-cube.tsx";
 import React from "react";
 import MaterialExamples from "../material/MaterialExamples.tsx";
+import NonRotateCube from "../non-rotate-cube/NonRotateCube.tsx";
+import { Qr } from "../qr-code/QrImproved.tsx";
 
 const AppRoutes: React.FC = () => {
   return (
@@ -32,6 +34,22 @@ const AppRoutes: React.FC = () => {
           element={
             <Canvas>
               <MaterialExamples />
+            </Canvas>
+          }
+        />
+        <Route
+          path="/non-rotate-cube"
+          element={
+            <Canvas>
+              <NonRotateCube />
+            </Canvas>
+          }
+        />
+        <Route
+          path="/qr-code"
+          element={
+            <Canvas>
+              <Qr />
             </Canvas>
           }
         />

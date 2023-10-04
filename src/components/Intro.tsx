@@ -14,6 +14,12 @@ const Intro: React.FC = () => {
       <div>
         <Link to={`/material-examples`}>Material Examples</Link>
       </div>
+      <div>
+        <Link to={`/non-rotate-cube`}>Non Rotate Cube</Link>
+      </div>
+      <div>
+        <Link to={`/qr-code`}>QrCode</Link>
+      </div>
     </div>
   );
 };
